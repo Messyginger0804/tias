@@ -30,11 +30,6 @@ function Header() {
                         {/* <li className='text-base text-black font-bold hover:text-orange-900 hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300'>Element</li> */}
                     </ul>
                     {/* <div className='relative'> */}
-                    <Link to='/cart'>
-                        <TfiShoppingCart className='text-2xl' />
-                    </Link>
-
-                    <span>{productData?.length}</span>
                     <Link to='/login' className='flex flex-wrap'>
                         <img className='w-14' src={
                             userInfo ? userInfo.image : 'https://cdn-icons-png.flaticon.com/512/61/61205.png'
@@ -43,6 +38,11 @@ function Header() {
                             userInfo && <p className='font-bold'>{userInfo.email}</p>
                         }
                     </Link>
+                    <Link to='/cart'>
+                        <TfiShoppingCart className='text-2xl' />
+                    </Link>
+
+                    <strong className='text-xl'>{productData?.length}</strong>
                 </div>
             </div>
         </div>
