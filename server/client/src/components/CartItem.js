@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
-import { BsCartPlusFill, BsTrash, BsArrowReturnLeft } from 'react-icons/bs';
-import { addToCart, addToQuantity, deleteFromCart, minusFromQuantity, resetCart } from '../redux/tiasSlice';
+import { BsTrash, BsArrowReturnLeft } from 'react-icons/bs';
+import { addToQuantity, deleteFromCart, minusFromQuantity, resetCart } from '../redux/tiasSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 // import { TfiShoppingCart } from 'react-icons/tfi';
@@ -11,8 +11,6 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 function CartItem() {
     const dispatch = useDispatch();
-    const [details, setDetails] = useState({})
-    let [baseQty, setBaseQty] = useState(1);
     const productData = useSelector((state) => state.tias.productData);
     // console.log(productData);
 

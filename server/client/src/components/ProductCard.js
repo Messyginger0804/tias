@@ -1,6 +1,5 @@
 import React from 'react'
 import { BsCartPlusFill } from 'react-icons/bs';
-import { MdDescription } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addToCart } from '../redux/tiasSlice';

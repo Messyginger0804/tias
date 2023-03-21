@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../assets/logo.png'
 // import payment from '../assets/payment.png'
 import { BsGithub, BsTwitter, BsLinkedin, BsPersonWorkspace } from 'react-icons/bs';
-import { MdEmail, MdAccountCircle, MdOutlineShoppingCartCheckout, MdAddHomeWork } from 'react-icons/md';
+import { MdEmail } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 
 // BsGithub BsTwitter BsLinkedin MdEmail
@@ -17,7 +17,7 @@ function Footer() {
                 <div className='cursor-pointer' onClick={() => {
                     navigate('/')
                 }}>
-                    <img className='w-full' src={logo} />
+                    <img className='w-full' src={logo} alt='logo' />
                 </div>
                 <div className='flex flex-col gap-4 justify-center'>
                     {/* <h2 className='text-2xl font-semibold'>Contact me</h2> */}

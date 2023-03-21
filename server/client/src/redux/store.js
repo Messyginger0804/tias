@@ -1,5 +1,4 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-// import tiasReducer from '../features/counter/counterSlice'
+import { configureStore } from '@reduxjs/toolkit'
 import tiasReducer from "./tiasSlice";
 import {
     persistStore,

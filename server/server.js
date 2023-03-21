@@ -10,10 +10,6 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.send('hello world')
-});
-
 app.post('/pay', async (req, res) => {
     console.log(req.body.token)
     await Stripe.charges.create({
@@ -23,6 +19,18 @@ app.post('/pay', async (req, res) => {
     })
 });
 
+app.get('/static/*', async (req, res) => {
+    const path = `${__dirname}/client/build${req.originalUrl}`
+    console.log('========', path);
+    await res.sendFile(path)
+});
+
+app.get('/*', async (req, res) => {
+    const path = __dirname + '/client/build/index.html';
+    console.log(path);
+    await res.sendFile(path)
+});
+
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
-})
+});

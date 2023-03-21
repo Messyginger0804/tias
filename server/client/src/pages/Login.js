@@ -1,6 +1,5 @@
 import React from 'react'
 import googleLogo from '../assets/googleLogo.png'
-import githubLogo from '../assets/githubLogo.png'
 import {
     GoogleAuthProvider,
     getAuth,

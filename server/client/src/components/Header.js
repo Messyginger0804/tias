@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import logo from '../assets/logo.png'
-import icon from '../assets/favicon.ico'
 import { TfiShoppingCart } from 'react-icons/tfi';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -33,7 +32,7 @@ function Header() {
                     <Link to='/login' className='flex flex-wrap'>
                         <img className='w-14' src={
                             userInfo ? userInfo.image : 'https://cdn-icons-png.flaticon.com/512/61/61205.png'
-                        } />
+                        } alt='user pic' />
                         {
                             userInfo && <p className='font-bold'>{userInfo.email}</p>
                         }

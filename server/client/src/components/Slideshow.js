@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
 
 // HiArrowLeft
