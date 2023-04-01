@@ -19,6 +19,7 @@ function SingleProduct() {
     useEffect(() => {
         setDetails(location.state.item);
     }, [location.state.item]);
+
     return (
         <div>
             <div className='max-w-screen-xl mx-auto my-10 flex gap-10'>
