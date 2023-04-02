@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
 import CartItem from '../components/CartItem';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
+import { resetCart } from '../redux/tiasSlice';
 
 const banner = `https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?cs=srgb&dl=pexels-dana-tentis-370799.jpg&fm=jpg`
 
@@ -11,6 +12,7 @@ const banner = `https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg
 
 
 function Cart() {
+    const dispatch = useDispatch()
     const productData = useSelector((state) => state.tias.productData);
     const userInfo = useSelector((state) => state.tias.userInfo);
     // console.log(productData);
@@ -29,6 +31,7 @@ function Cart() {
     const handleCheckout = () => {
         if (userInfo) {
             setPayNow(true)
+
         } else {
             toast.error('please sign in to purchase')
         }
@@ -38,6 +41,8 @@ function Cart() {
             amount: totalAmount * 100,
             token: token,
         })
+        toast.success('payment successful')
+        dispatch(resetCart())
     }
     return (
         <div>
