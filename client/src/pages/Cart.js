@@ -41,8 +41,8 @@ function Cart() {
             amount: totalAmount * 100,
             token: token,
         })
-        toast.success('payment successful')
-        dispatch(resetCart())
+        toast.success('payment successful') &&
+            dispatch(resetCart())
     }
     return (
         <div>
@@ -77,7 +77,7 @@ function Cart() {
                             amount={totalAmount * 100}
                             label='pay to tia'
                             description={`Your Payment amount is $${totalAmount}`}
-                            token={payment}
+                            token={payment()}
                             email={userInfo.email}
                         />
                     </div>
