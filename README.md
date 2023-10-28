@@ -5,7 +5,7 @@ Welcome to **Tias**, your go-to e-commerce platform built with Next.js, Stripe f
 
 ## Project Overview
 
-- **Project Name:** [Tias]()https://tias.netlify.app/
+- **Project Name:** [Tias](https://tias.netlify.app/)
 - **Framework:** [Next.js](https://nextjs.org/)
 - **Payment Integration:** [Stripe](https://stripe.com/)
 - **State Management:** [Redux](https://redux.js.org/) & [Redux Toolkit](https://redux-toolkit.js.org/)
