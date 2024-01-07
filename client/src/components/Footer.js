@@ -26,7 +26,7 @@ function Footer() {
 
                 </div>
                 <div className='flex flex-col gap-4 justify-center'>
-                    <a href='https://jcashleyportfolio.netlify.com' className='text-sm tracking-wide hover:text-white'>Created by JC Ashley</a>
+                    <a href='https://jcashleyportfolio.netlify.app' className='text-sm tracking-wide hover:text-white'>Created by JC Ashley</a>
 
                     <div className='flex gap-6 text-lg text-gray-400'>
                         <a href='https://github.com/Messyginger0804'> <BsGithub className='hover:text-white duration-300 cursor-pointer' /> </a>
