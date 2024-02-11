@@ -59,5 +59,7 @@ export const tiasSlice = createSlice({
     },
 });
 
-export const { addToCart, deleteFromCart, resetCart, addToQuantity, minusFromQuantity, addUser, deleteUser } = tiasSlice.actions;
+export const
+    { addToCart, deleteFromCart, resetCart, addToQuantity, minusFromQuantity, addUser, deleteUser }
+        = tiasSlice.actions;
 export default tiasSlice.reducer;

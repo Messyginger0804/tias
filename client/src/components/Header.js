@@ -30,7 +30,7 @@ function Header() {
                     </ul>
                     {/* <div className='relative'> */}
                     <Link to='/login' className='flex flex-wrap'>
-                        <img className='w-14' src={
+                        <img className='w-14 rounded-lg' src={
                             userInfo ? userInfo.image : 'https://cdn-icons-png.flaticon.com/512/61/61205.png'
                         } alt='user pic' />
                         {
